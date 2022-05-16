@@ -16,8 +16,8 @@ def getStepReward(step):
 if __name__ == '__main__':
     #tf.compat.v1.disable_eager_execution()
     env = Intersection([[3, 10, 1],[1, 10, 0]])
-    lr = 0.001
-    n_games = 1000
+    lr = 0.003
+    n_games = 3000
     agent = Agent(gamma=0.99, epsilon=1.0, lr=lr, 
                 input_dims=env.observation_space.shape,
                 n_actions=env.actions, mem_size=1000000, batch_size=64,
